@@ -5,12 +5,13 @@
     </p>
 </div>
 <div class="row">
-    <div class="col-sm-6 col-md-4" ng-repeat="site in sites">
+    <div class="col-sm-6 col-md-4">
         <div class="thumbnail">
             <div class="caption">
-                <h3>{{site.title}}</h3>
-                <p>{{site.description}}</p>
-                <p><a ng-href="{{site.url}}">{{site.url}}</a>
+                <h3>{{title}}</h3>
+                <p>{{condition}}</p>
+                <img ng-src="{{imgsrc}}">
+                <p><a ng-href="{{site.url}}">{{buybtn}}</a>
                 </p>
             </div>
         </div>

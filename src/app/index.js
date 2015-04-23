@@ -11,3 +11,10 @@ angular.module('dailysteals', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize'
 
         $urlRouterProvider.otherwise('/');
     });
+//    .config(['RestangularProvider', function (RestangularProvider, $stateProvider) {
+//        RestangularProvider.setBaseUrl('https://www.kimonolabs.com/api/as777lwi');
+//        RestangularProvider.setDefaultRequestParams({
+//            apikey: 'lxZzI5UKXbWL2JK3DL0U2g2uCfMjFUgd',
+//        });
+//        console.log(RestangularProvider);
+//    }]);
