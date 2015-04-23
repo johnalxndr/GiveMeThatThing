@@ -10,7 +10,4 @@ angular.module('dailysteals')
                 'logo': ''
       }
     ];
-        angular.forEach($scope.sites, function (site) {
-            site.rank = Math.random();
-        });
     });
