@@ -1,25 +1,16 @@
-<div class="container-fluid text-center">
-    <h1>DailySteals</h1>
-    <p class="lead">
-        <br> The best deals on the web in one place.
-    </p>
+<!--    <div ng-include="'components/navbar/navbar.html'"></div>-->
+<div class="container-fluid text-center well">
+    <h1>DAILYDEALS</h1>
+    <h4>YOUR FAVORITE DEAL SITES ALL IN ONE PLACE.</h4>
 </div>
+
 <div class="row">
-    <div class="col-sm-6 col-md-4">
-        <div class="thumbnail">
-            <div>
-                <h3>{{title}}</h3>
-                <p>{{condition}}</p>
-                <img ng-src="{{imgsrc}}">
-                <p><a ng-href="{{site.url}}">{{buybtn}}</a>
-                </p>
-            </div>
+    <div class="container">
+        <div class="col-sm-6 col-md-4">
+            <h2>{{main.wootData.collection1[0].title.text}}</h2>
+            <img class="img-responstive" ng-src="{{main.wootData.collection1[0].image.src}}" alt="{{awesomeThing.title}}">
+            <p>{{main.wootData.collection1[0].price.text}}</p>
+            <a href="{{main.wootData.collection1[0].price.href}}" class="btn btn-default">BUY</a>
         </div>
     </div>
-</div>
-
-<hr>
-
-<div class="footer">
-    <p>@johnalxndr</p>
 </div>
