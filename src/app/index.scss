@@ -1,16 +1,24 @@
-.browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
+$red-primary:#e9004e;
+$red-secondary:#c00040;
+.header {
+    background-color: $red-primary;
+    padding: 4em;
+    i {
+        font-size: 4em;
+    }
+    h1 {
+        color: #fff;
+    }
+    h4 {
+        color: #fff;
+    }
 }
 
-.thumbnail {
-  height: 200px;
-
-  img.pull-right {
-    width: 50px;
-  }
+.site {
+    a {
+        color: $red-secondary;
+    }
 }
+
 // injector
 // endinjector
