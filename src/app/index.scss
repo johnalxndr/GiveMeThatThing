@@ -1,22 +1,24 @@
-$red-primary:#e9004e;
-$red-secondary:#c00040;
+$primary-red:#e9004e;
 .header {
-    background-color: $red-primary;
-    padding: 4em;
+    background-color: $primary-red;
     i {
-        font-size: 4em;
+        font-size: 3em;
     }
-    h1 {
-        color: #fff;
-    }
-    h4 {
-        color: #fff;
-    }
+    h1 {}
+    h4 {}
 }
 
 .site {
+    h3 {
+        font-size: 2em;
+        text-align: center;
+    }
     a {
-        color: $red-secondary;
+        color: $primary-red;
+    }
+    p {
+        color: darkgreen;
+        font-size: 2em;
     }
 }
 
