@@ -8,7 +8,8 @@
 <div class="row">
     <div class="container">
         <div class="site col-sm-12 col-md-6 text-center">
-            <img class="img-responsive" ng-src="assets/images/woot.png">
+            <!--<img class="img-responsive" ng-src="assets/images/woot.png">-->
+
             <img class="img-responsive" ng-src="{{main.wootData.collection1[0].image.src}}" alt="{{}}">
             <h3>{{main.wootData.collection1[0].title.text}}</h3>
             <p class="condition">{{main.wootData.collection1[0].condition.text}}</p>
@@ -21,6 +22,13 @@
             <p class="condition">{{main.steepcheapData.collection1[0].condition.text}}</p>
             <p class="price">{{main.steepcheapData.collection1[0].price.text}}</p>
             <a href="{{main.steepcheapData.collection1[0].price.href}}" class=" btn btn-hollow">GIMME THAT THING</a>
+        </div>
+        <div class="dealgenius col-sm-12 col-md-6 text center">
+            <img class="img-responsive" ng-src="{{main.dealgeniusData.collection1[0].image.src}}">
+            <h3>{{main.dealgeniusData.collection1[0].title}}</h3>
+            <p class="condition">{{main.dealgeniusData.collection1[0].condition.text}}</p>
+            <p class="price">{{main.dealgeniusData.collection1[0].price}}</p>
+            <a href="{{main.dealgeniusData.collection1[0].price.href}}" class=" btn btn-hollow">GIMME THAT THING</a>
         </div>
     </div>
 </div>
