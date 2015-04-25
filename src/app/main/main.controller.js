@@ -8,6 +8,9 @@ angular.module('dailysteals')
     api.woot.then(function (data) {
         self.wootData = data.results;
         console.log(data.results.collection1[0].price);
-
     });
+    api.steepcheap.then(function (data) {
+        self.steepcheapData = data.results;
+        console.log(data.results.collection1[0].price);
+    })
 }]);
