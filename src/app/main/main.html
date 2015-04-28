@@ -7,20 +7,53 @@
 
 <div class="row">
     <div class="container">
-        <div class="site col-sm-12 col-md-6 text-center">
-            <img class="img-responsive" ng-src="assets/images/woot.png">
-            <img class="img-responsive" ng-src="{{main.wootData.collection1[0].image.src}}" alt="{{}}">
-            <h3>{{main.wootData.collection1[0].title.text}}</h3>
-            <p class="condition">{{main.wootData.collection1[0].condition.text}}</p>
-            <p class="price">{{main.wootData.collection1[0].price.text}}</p>
-            <a href="{{main.wootData.collection1[0].price.href}}" class=" btn btn-hollow">GIMME THAT THING</a>
-        </div>
-        <div class="steep col-sm-12 col-md-6 text center">
-            <img class="img-responsive" ng-src="{{main.steepcheapData.collection1[0].image.src}}">
-            <h3>{{main.steepcheapData.collection1[0].title.text}}</h3>
-            <p class="condition">{{main.steepcheapData.collection1[0].condition.text}}</p>
-            <p class="price">{{main.steepcheapData.collection1[0].price.text}}</p>
-            <a href="{{main.steepcheapData.collection1[0].price.href}}" class=" btn btn-hollow">GIMME THAT THING</a>
-        </div>
+       <section id="woot">
+          <div class="wrap container-fluid">
+               <h2>WOOT</h2>
+            </div>   
+                <div class="site col-sm-12 col-md-6 text-center">
+                    <img class="img-responsive" ng-src="{{main.wootData.image.src}}" alt="{{}}">
+                    <p class="price">{{main.wootData.price.text}}</p>
+                    <h3>{{main.wootData.title.text}}</h3>
+                    <p class="condition">{{main.wootData.condition.text}}</p>
+                    <a href="{{main.wootData.collection1[0].price.href}}" class=" btn btn-hollow">GIMME THAT THING</a>
+                </div>
+                <div class="site col-sm-12 col-md-6 text-center">
+                    <img class="img-responsive" ng-src="{{main.wootShirtData.image.src}}" alt="{{}}">
+                    <p class="price">{{main.wootShirtData.price.text}}</p>
+                    <h3>{{main.wootShirtData.title.text}}</h3>
+                    <p class="condition">{{main.wootShirtData.condition.text}}</p>
+                    <a href="{{main.wootShirtData.price.href}}" class=" btn btn-hollow">GIMME THAT THING</a>
+                </div>
+                <div class="site col-sm-12 col-md-6 text-center">
+
+                    <img class="img-responsive" ng-src="{{main.wootElectronicsData.image.src}}" alt="{{}}">
+                    <p class="price">{{main.wootElectronicsData.price.text}}</p>
+                    <h3>{{main.wootElectronicsData.title.text}}</h3>
+                    <p class="condition">{{main.wootElectronicsData.condition.text}}</p>
+                    <a href="{{main.wootElectronicsData.price.href}}" class=" btn btn-hollow">GIMME THAT THING</a>
+                 </div>
+                <div class="site col-sm-12 col-md-6 text-center">
+                    <img class="img-responsive" ng-src="{{main.wootHomeData.image.src}}" alt="{{}}">
+                    <p class="price">{{main.wootHomeData.price.text}}</p>
+                    <h3>{{main.wootHomeData.title.text}}</h3>
+                    <p class="condition">{{main.wootHomeData.condition.text}}</p>
+                    <a href="{{main.wootHomeData.price.href}}" class=" btn btn-hollow">GIMME THAT THING</a>
+                </div>
+        </section>
+            <div class="site col-sm-12 col-md-6 text-center">
+                <img class="img-responsive" ng-src="{{main.steepcheapData.image.src}}">
+                <p class="price">{{main.steepcheapData.price.text}}</p>
+                <h3>{{main.steepcheapData.title.text}}</h3>
+                <p class="condition">{{main.steepcheapData.condition.text}}</p>
+                <a href="{{main.steepcheapData.price.href}}" class=" btn btn-hollow">GIMME THAT THING</a>
+            </div>
+            <div class="site col-sm-12 col-md-6 text-center">
+                <img class="img-responsive" ng-src="{{main.dealgeniusData.image.src}}">
+                <p class="price">{{main.dealgeniusData.price}}</p>    
+                <h3>{{main.dealgeniusData.title}}</h3>
+                <p class="condition">{{main.dealgeniusData.condition.text}}</p>
+                <a href="{{main.dealgeniusData.collection1[0].price.href}}" class=" btn btn-hollow">GIMME THAT THING</a>
+            </div>
     </div>
 </div>
