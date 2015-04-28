@@ -1,31 +1,32 @@
 <!--    <div ng-include="'components/navbar/navbar.html'"></div>-->
-<header class="header container-fluid text-center well">
+<header>
     <i class="ion-pricetags"></i>
-    <h1>DAILYSTEALS</h1>
-    <h4>YOUR FAVORITE DEAL SITES ALL IN ONE PLACE.</h4>
+    <h1>GIMME THAT THING</h1>
+    <h2>YOUR FAVORITE DEAL SITES ALL IN ONE PLACE.</h2>
 </header>
-
-<div class="row">
-    <div class="container">
-       <section id="woot">
-          <div class="wrap container-fluid">
-               <h2>WOOT</h2>
-            </div>   
-                <div class="site col-sm-12 col-md-6 text-center">
+	<section class='login'>
+		<a href='#' class='btn'>
+    			<i class="ion-social-facebook"></i>
+				sign up to customize deals shown</a>
+	</section><!--login-->
+    <div>
+       <section id="woot" class='dealsite'>
+               <h3 class='sitehead'>WOOT</h3>
+                <div class="site product text-center">
                     <img class="img-responsive" ng-src="{{main.wootData.image.src}}" alt="{{}}">
                     <p class="price">{{main.wootData.price.text}}</p>
                     <h3>{{main.wootData.title.text}}</h3>
                     <p class="condition">{{main.wootData.condition.text}}</p>
                     <a href="{{main.wootData.collection1[0].price.href}}" class=" btn btn-hollow">GIMME THAT THING</a>
                 </div>
-                <div class="site col-sm-12 col-md-6 text-center">
+                <div class="site product text-center">
                     <img class="img-responsive" ng-src="{{main.wootShirtData.image.src}}" alt="{{}}">
                     <p class="price">{{main.wootShirtData.price.text}}</p>
                     <h3>{{main.wootShirtData.title.text}}</h3>
                     <p class="condition">{{main.wootShirtData.condition.text}}</p>
                     <a href="{{main.wootShirtData.price.href}}" class=" btn btn-hollow">GIMME THAT THING</a>
                 </div>
-                <div class="site col-sm-12 col-md-6 text-center">
+                <div class="site product text-center">
 
                     <img class="img-responsive" ng-src="{{main.wootElectronicsData.image.src}}" alt="{{}}">
                     <p class="price">{{main.wootElectronicsData.price.text}}</p>
@@ -33,27 +34,29 @@
                     <p class="condition">{{main.wootElectronicsData.condition.text}}</p>
                     <a href="{{main.wootElectronicsData.price.href}}" class=" btn btn-hollow">GIMME THAT THING</a>
                  </div>
-                <div class="site col-sm-12 col-md-6 text-center">
+                <div class="site product text-center">
                     <img class="img-responsive" ng-src="{{main.wootHomeData.image.src}}" alt="{{}}">
                     <p class="price">{{main.wootHomeData.price.text}}</p>
                     <h3>{{main.wootHomeData.title.text}}</h3>
                     <p class="condition">{{main.wootHomeData.condition.text}}</p>
                     <a href="{{main.wootHomeData.price.href}}" class=" btn btn-hollow">GIMME THAT THING</a>
                 </div>
-        </section>
-            <div class="site col-sm-12 col-md-6 text-center">
+	   </section><!--woot-->
+	   <section id='steepcheap' class='dealsite'>
+			   <h3 class='sitehead'>Steep and Cheap</h3>
+            <div class="site product text-center">
                 <img class="img-responsive" ng-src="{{main.steepcheapData.image.src}}">
                 <p class="price">{{main.steepcheapData.price.text}}</p>
                 <h3>{{main.steepcheapData.title.text}}</h3>
                 <p class="condition">{{main.steepcheapData.condition.text}}</p>
                 <a href="{{main.steepcheapData.price.href}}" class=" btn btn-hollow">GIMME THAT THING</a>
             </div>
-            <div class="site col-sm-12 col-md-6 text-center">
+            <div class="site product text-center">
                 <img class="img-responsive" ng-src="{{main.dealgeniusData.image.src}}">
                 <p class="price">{{main.dealgeniusData.price}}</p>    
                 <h3>{{main.dealgeniusData.title}}</h3>
                 <p class="condition">{{main.dealgeniusData.condition.text}}</p>
                 <a href="{{main.dealgeniusData.collection1[0].price.href}}" class=" btn btn-hollow">GIMME THAT THING</a>
             </div>
-    </div>
+	   </section><!--steepcheap-->
 </div>
