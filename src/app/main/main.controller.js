@@ -6,15 +6,24 @@ angular.module('dailysteals')
     var self = this;
 
     api.woot.then(function (data) {
-        self.wootData = data.results;
-        console.log(data.results.collection1[0].price);
+        self.wootData = data.results.collection1[0];
     });
     api.steepcheap.then(function (data) {
-        self.steepcheapData = data.results;
-        console.log(data.results.collection1[0].price);
+        self.steepcheapData = data.results.collection1[0];
     });
     api.dealgenius.then(function (data) {
-        self.dealgeniusData = data.results;
-        console.log(data.results.collection1[0].price);
+        self.dealgeniusData = data.results.collection1[0];        
+    });
+      api.wootshirt.then(function (data) {
+        self.wootShirtData = data.results.collection1[0];
+    });
+       api.woothome.then(function (data) {
+        self.wootHomeData = data.results.collection1[0];
+    });
+       api.wootsport.then(function (data) {
+        self.wootSportData = data.results.collection1[0];
+    });
+       api.wootelectronics.then(function (data) {
+        self.wootElectronicsData = data.results.collection1[0];
     });
 }]);
