@@ -1,16 +1,46 @@
-.browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
+$primary-red:#e9004e;
+$primary-green:#00e99b;
+$background:#f7f7f7;
+.header {
+    background-color: $primary-red;
+    i {
+        font-size: 3em;
+    }
+}
+div > div > #woot > .wrap > h2 {
+    color: #ffffff;
+}
+div > div > #woot > .wrap {
+    background-color: $primary-red;
 }
 
-.thumbnail {
-  height: 200px;
-
-  img.pull-right {
-    width: 50px;
-  }
+.img-responsive{
+    margin:0;
 }
+
+.site {
+    h3 {
+        font-size: 2em;
+    }
+    .price {
+        font-size: 2em;
+    }
+}
+
+.btn {
+    color:#ffffff;
+    border: 2px solid $primary-red;
+    background-color: $primary-red;
+    padding: 1em;
+    font-weight: 600;
+    line-height: 1;
+    &:hover {
+        background-color: #ffffff;
+        color: $primary-red;
+        border: 2px solid $primary-red;
+
+    }
+}
+
 // injector
 // endinjector
