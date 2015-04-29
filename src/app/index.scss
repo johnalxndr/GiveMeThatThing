@@ -1,16 +1,112 @@
-.browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
+$primary-red:#e9004e;
+$primary-green:#00e99b;
+$headtxt: #FFFFFF;
+$background:#f7f7f7;
+body {
+	background-color: $background;
+}
+header {
+    background-color: $primary-red;
+	width: 100%;
+	text-align: center;
+	padding-top: 1em;
+	padding-bottom: 1em;
+    i {
+        font-size: 2.5em;
+		display: inline-block;
+		margin-right: 0.25em;
+		color: $headtxt;
+    }
+	h1 {
+		font-size: 1.9em;
+		display: inline-block;
+		color: $headtxt;
+	}
+	h2 {
+		font-size: 1.25em;
+		color: $headtxt;
+	}
+}
+.login {
+	i {
+	background-color: blue;
+	font-size: 1.5em;
+	padding: 0.25em 0.75em 0.25em 0.75em;
+	}//idk about this John discuss.....
+}
+.sitehead {
+	width: 100%;
+	background-color: $primary-red;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	padding-left: 1em;
+	color: $headtxt;
+	text-align: left;
+}
+.img-responsive{
+    margin:0;
+}
+.login {
+	text-align: center;
+	margin-top: 2em;
+}
+.product {
+	display: inline-block;
+	width: 90%;
+	margin-bottom: 2em;
+	margin-top: 2em;
+	box-sizing: border-box;
+	padding: 2em;
+	border: 2px solid $primary-red;
+	border-radius: 3px;
+	position: relative;
+	background-color: white;
+    .price {
+		color: white;
+		position: absolute;
+        font-size: 1.25em;
+		background-color: $primary-red;
+		padding: 0.25em;
+		padding-right: 0.5em;
+		top: 10%;
+		left: 0;
+    }
 }
 
-.thumbnail {
-  height: 200px;
+.dealsite {
+	text-align: center;
+}
 
-  img.pull-right {
-    width: 50px;
-  }
+.site {
+    h3 {
+        font-size: 2em;
+    }
+}
+
+.btn {
+    color:#ffffff;
+    border: 2px solid $primary-red;
+    background-color: $primary-red;
+    padding: 1em;
+    font-weight: 600;
+    line-height: 1;
+    &:hover {
+        background-color: #ffffff;
+        color: $primary-red;
+        border: 2px solid $primary-red;
+
+    }
+}
+// media queries for tablet and desktop
+@media (min-width: 600px) {
+.product {
+	width: 48%;
+}
+}
+@media (min-width: 1100px) {
+.product {
+	width: 33%;
+}
 }
 // injector
 // endinjector

@@ -1,16 +1,29 @@
 'use strict';
 
 angular.module('dailysteals')
-    .controller('MainCtrl', function ($scope) {
-        $scope.sites = [
-            {
-                'title': 'Woot',
-                'url': 'https://angularjs.org/',
-                'description': 'HTML enhanced for web apps!',
-                'logo': ''
-      }
-    ];
-        angular.forEach($scope.sites, function (site) {
-            site.rank = Math.random();
-        });
+
+.controller('MainCtrl', ['api', function (api) {
+    var self = this;
+
+    api.woot.then(function (data) {
+        self.wootData = data.results.collection1[0];
     });
+    api.steepcheap.then(function (data) {
+        self.steepcheapData = data.results.collection1[0];
+    });
+    api.dealgenius.then(function (data) {
+        self.dealgeniusData = data.results.collection1[0];        
+    });
+      api.wootshirt.then(function (data) {
+        self.wootShirtData = data.results.collection1[0];
+    });
+       api.woothome.then(function (data) {
+        self.wootHomeData = data.results.collection1[0];
+    });
+       api.wootsport.then(function (data) {
+        self.wootSportData = data.results.collection1[0];
+    });
+       api.wootelectronics.then(function (data) {
+        self.wootElectronicsData = data.results.collection1[0];
+    });
+}]);
