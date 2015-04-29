@@ -1,9 +1,14 @@
-$primary-red:#e9004e;
-$primary-green:#00e99b;
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
+
+$primary-red:#D44557;
+$primary-gray:#2C343B;
+$gray:#54626C;
+$light-gray:#C1CBCD;
 $headtxt: #FFFFFF;
 $background:#f7f7f7;
 body {
 	background-color: $background;
+    font-family: 'Open Sans', sans-serif;
 }
 header {
     background-color: $primary-red;
@@ -15,16 +20,19 @@ header {
         font-size: 2.5em;
 		display: inline-block;
 		margin-right: 0.25em;
-		color: $headtxt;
+        float: left;
     }
 	h1 {
 		font-size: 1.9em;
 		display: inline-block;
-		color: $headtxt;
+		color: $primary-gray;
+        float: left;
+        text-align: center;
 	}
 	h2 {
 		font-size: 1.25em;
 		color: $headtxt;
+        display: inline-block;
 	}
 }
 .login {
@@ -37,8 +45,8 @@ header {
 .sitehead {
 	width: 100%;
 	background-color: $primary-red;
-	padding-top: 0.5em;
-	padding-bottom: 0.5em;
+	padding-top: 1em;
+	padding-bottom: 1em;
 	padding-left: 1em;
 	color: $headtxt;
 	text-align: left;
@@ -57,7 +65,7 @@ header {
 	margin-top: 2em;
 	box-sizing: border-box;
 	padding: 2em;
-	border: 2px solid $primary-red;
+	border: 2px solid $light-gray;
 	border-radius: 3px;
 	position: relative;
 	background-color: white;
@@ -80,6 +88,7 @@ header {
 .site {
     h3 {
         font-size: 2em;
+        color: $gray;
     }
 }
 
