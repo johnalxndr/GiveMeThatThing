@@ -10,31 +10,56 @@ body {
 	background-color: $background;
     font-family: 'Open Sans', sans-serif;
 }
-header {
-    background-color: $primary-red;
-	width: 100%;
-	text-align: center;
-	padding-top: 1em;
-	padding-bottom: 1em;
-    i {
-        font-size: 2.5em;
-		display: inline-block;
-		margin-right: 0.25em;
-        float: left;
-    }
-	h1 {
-		font-size: 1.9em;
-		display: inline-block;
-		color: $primary-gray;
-        float: left;
-        text-align: center;
-	}
-	h2 {
-		font-size: 1.25em;
-		color: $headtxt;
-        display: inline-block;
-	}
+.navbar-default{
+    background-color: white;
+    border-bottom-color: $primary-red;
 }
+.navbar-default .navbar-brand{
+    color:$primary-red;
+}
+.navbar-default .navbar-nav > li > a{
+    color: $primary-red;
+}
+.navbar-default .navbar-nav > .active > a{
+    color: $primary-red;
+    background-color: white;
+    &:hover{
+        background-color: white;
+        color:$primary-gray;
+    }
+}
+.navbar-default .navbar-toggle{
+    border-color:$primary-red;
+    .icon-bar{
+        background-color: $primary-red;
+    }
+}
+
+//header {
+//    background-color: $primary-red;
+//	width: 100%;
+//	text-align: center;
+//	padding-top: 1em;
+//	padding-bottom: 1em;
+//    i {
+//        font-size: 2.5em;
+//		display: inline-block;
+//		margin-right: 0.25em;
+//        float: left;
+//    }
+//	h1 {
+//		font-size: 1.9em;
+//		display: inline-block;
+//		color: $primary-gray;
+//        float: left;
+//        text-align: center;
+//	}
+//	h2 {
+//		font-size: 1.25em;
+//		color: $headtxt;
+//        display: inline-block;
+//	}
+//}
 .login {
 	i {
 	background-color: blue;
@@ -83,13 +108,6 @@ header {
 
 .dealsite {
 	text-align: center;
-}
-
-.site {
-    h3 {
-        font-size: 2em;
-        color: $gray;
-    }
 }
 
 .btn {
