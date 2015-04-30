@@ -7,9 +7,6 @@ angular.module('dailysteals')
     api.woot.then(function (data) {
         self.wootData = data.results.collection1[0];
     });
-    api.steepcheap.then(function (data) {
-        self.steepcheapData = data.results.collection1[0];
-    });
     api.dealgenius.then(function (data) {
         self.dealgeniusData = data.results.collection1[0];        
     });

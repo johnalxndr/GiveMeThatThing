@@ -1,7 +1,36 @@
-    <div ng-include="'components/navbar/navbar.html'"></div>
-    
+   <nav class="navbar navbar-static-top navbar-default" role="navigation">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand">
+        <span class="ion-pricetags"></span> GiveMeThatThing.com
+        </a><!-- Nav-header-->
+    </div>
+      <div class="collapse navbar-collapse" ng-class="!navCollapsed && 'in'" ng-click="navCollapsed=true">
+        <ul class="nav navbar-nav navbar-right">
+            <li><a a href="#woot">Woot</a></li>
+            <li><a a href="#/#dealgenius">DealGenius</a></li>
+            <li><a a href="#/#ebay">Ebay</a></li>
+            <li><a a href="#/#amazon">Amazon</a></li>
+            <li><a a href="#/#yugster">Yugster</a></li>
+            <li><a a href="home" ng-click="nav.logout()">Logout</a></li>
+            <ul class="dropdown-menu">
+                <li><a a href="#woot">Woot</a></li>
+                <li><a a href="#dealgenius">DealGenius</a></li>
+                <li><a a href="#dealgenius">Ebay</a></li>
+                <li><a a href="#dealgenius">Amazon</a></li>
+                <li><a a href="#dealgenius">Yugster</a></li>
+                <li><a a href="home" ng-click="nav.logout()">Logout</a></li>
+            </ul>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+</nav>
 	<section class='login'>
-		<a href='#' class='btn'>
+		<a href='#' ng-click='main.fbLogin()' class='btn'>
     			<i class="ion-social-facebook"></i>
 				sign up to customize deals shown</a>
 	</section><!--login-->
@@ -41,15 +70,7 @@
                     <a href="{{main.wootHomeData.price.href}}" class=" btn btn-hollow">GIMME THAT THING</a>
                 </div>
 	   </section><!--woot-->
-	   <section id='steepcheap' class='dealsite'>
-			   <h3 class='sitehead'>Steep and Cheap</h3>
-            <div class="site product text-center">
-                <img class="img-responsive" ng-src="{{main.steepcheapData.image}">
-                <p class="price">{{main.steepcheapData.price}}</p>
-                <h3>{{main.steepcheapData.title}}</h3>
-                <a href="{{main.steepcheapData}}" class=" btn btn-hollow">GIMME THAT THING</a>
-            </div>
-        </section><!--steepcheap-->
+	
         <section id ='dealgenius' class='dealsite'>
                 <h3 class='sitehead'>Deal Genious</h3>    
             <div class="site product text-center">
@@ -96,3 +117,8 @@
             </div>
 	   </section><!--ebay-->	   	   
 </div>
+<footer id="footer">
+   <div class="container">
+    <p>copywrite John & Jon</p>
+    </div>
+</footer>

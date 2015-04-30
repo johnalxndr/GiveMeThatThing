@@ -4,7 +4,6 @@ angular.module('dailysteals')
 
 .factory('api', ['Restangular', function (Restangular) {
     return {
-        steepcheap: Restangular.one('c6zfuiww').get(),
         dealgenius: Restangular.one('af2vnwdy').get(),
         woot: Restangular.one('as777lwi').get(),
         wootelectronics: Restangular.one('9ye1jinc').get(),
