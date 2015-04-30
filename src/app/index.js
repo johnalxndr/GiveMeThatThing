@@ -9,7 +9,7 @@ angular.module('dailysteals', ['restangular', 'ui.router', 'ui.bootstrap'])
                 controller: 'MainCtrl',
                 controllerAs: 'main'
             });
-
+       
         $urlRouterProvider.otherwise('/');
     })
     .config(['RestangularProvider', function (RestangularProvider) {

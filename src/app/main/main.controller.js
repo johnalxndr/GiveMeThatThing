@@ -4,7 +4,6 @@ angular.module('dailysteals')
 
 .controller('MainCtrl', ['api', function (api) {
     var self = this;
-
     api.woot.then(function (data) {
         self.wootData = data.results.collection1[0];
     });
@@ -25,5 +24,14 @@ angular.module('dailysteals')
     });
        api.wootelectronics.then(function (data) {
         self.wootElectronicsData = data.results.collection1[0];
+    });
+        api.ebay.then(function (data) {
+        self.ebayData = data.results.collection1[0];  
+    });
+        api.amazon.then(function (data) {
+        self.amazonData = data.results.collection1[0];  
+    });
+        api.yugster.then(function (data) {
+        self.yugsterData = data.results.collection1[0];  
     });
 }]);
