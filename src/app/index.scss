@@ -16,6 +16,16 @@ body {
 }
 .navbar-default .navbar-brand{
     color:$primary-red;
+    &:hover{
+        color: $primary-red;
+        cursor: pointer;
+    }
+    &:focus{
+        background-color: white;
+    }
+    &:active{
+        background-color: white;
+    }
 }
 .navbar-default .navbar-nav > li > a{
     color: $primary-red;
@@ -30,6 +40,9 @@ body {
 }
 .navbar-default .navbar-toggle{
     border-color:$primary-red;
+    &:hover{
+        background-color: white;
+    }
     .icon-bar{
         background-color: $primary-red;
     }
@@ -39,7 +52,7 @@ body {
 	background-color: blue;
 	font-size: 1.5em;
 	padding: 0.25em 0.75em 0.25em 0.75em;
-	}//idk about this John discuss.....
+	}
 }
 .sitehead {
 	width: 100%;
@@ -50,8 +63,13 @@ body {
 	color: $headtxt;
 	text-align: left;
 }
-.img-responsive{
+.img-responsive {
     margin:0;
+  @media screen and (max-width: 320px) {
+    width: 100px;
+  }
+  @media screen and (min-width: 1200px) {
+  }
 }
 .login {
 	text-align: center;
@@ -78,6 +96,14 @@ body {
 		top: 10%;
 		left: 0;
     }
+    .retail{
+        color: $primary-red;
+        position: absolute;
+        font-size: 1.25em;
+        top:22%;
+        left:0;
+        padding: .25em;
+    }
 }
 
 .dealsite {
@@ -86,18 +112,29 @@ body {
 
 .btn {
     color:#ffffff;
-    border: 2px solid $primary-red;
     background-color: $primary-red;
     padding: 1em;
     font-weight: 600;
     line-height: 1;
     &:hover {
-        background-color: #ffffff;
-        color: $primary-red;
-        border: 2px solid $primary-red;
-
+        background-color:darken($primary-red, 10%);
+        color: white;
     }
 }
+
+footer{
+    background-color: $light-gray;
+    p{
+        color: $primary-red;
+        padding:2em;
+    }
+}
+
+
+
+
+
+
 // media queries for tablet and desktop
 @media (min-width: 600px) {
 .product {
