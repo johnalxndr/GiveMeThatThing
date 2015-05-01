@@ -17,23 +17,29 @@
             <li><a a href="#/#ebay">Ebay</a></li>
             <li><a a href="#/#amazon">Amazon</a></li>
             <li><a a href="#/#yugster">Yugster</a></li>
-            <li><a a href="home" ng-click="nav.logout()">Logout</a></li>
+            <li><a a href="#" ng-click="main.logout()">Logout</a></li>
             <ul class="dropdown-menu">
                 <li><a a href="#woot">Woot</a></li>
                 <li><a a href="#dealgenius">DealGenius</a></li>
                 <li><a a href="#dealgenius">Ebay</a></li>
                 <li><a a href="#dealgenius">Amazon</a></li>
                 <li><a a href="#dealgenius">Yugster</a></li>
-                <li><a a href="home" ng-click="nav.logout()">Logout</a></li>
+                <li><a a href="#" ng-click="main.logout()">Logout</a></li>
             </ul>
         </ul>
       </div><!-- /.navbar-collapse -->
 </nav>
     <div class='thecontainer'>
-	<section class='login'>
-		<a href='#' ng-click='main.fbLogin()' class='btn'>
+	<section class='login' ng-show='main.loginbox'>
+		<p>
+		If you would like to customize which deal sites you see
+		and receive consolidatd updates create an account.
+		</p>	
+		<a href='#' ng-click='main.fbLogin()' 
+				class='btn'>
     			<i class="ion-social-facebook"></i>
-				sign up to customize deals shown</a>
+				sign up with facebook</a>
+		<a href='#' ng-click='main.loginbox = false'>No thanks I dont want an account</a>
 	</section><!--login-->
        <section id='woot' class='dealsite'>
                <h3 class='sitehead'>WOOT</h3>
