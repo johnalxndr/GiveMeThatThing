@@ -12,14 +12,14 @@
     </div>
       <div class="collapse navbar-collapse" ng-class="!navCollapsed && 'in'" ng-click="navCollapsed=true">
         <ul class="nav navbar-nav navbar-right">
-            <li><a a href="#woot">Woot</a></li>
+            <li><a a href="#/#woot">Woot</a></li>
             <li><a a href="#/#dealgenius">DealGenius</a></li>
             <li><a a href="#/#ebay">Ebay</a></li>
             <li><a a href="#/#amazon">Amazon</a></li>
             <li><a a href="#/#yugster">Yugster</a></li>
             <li><a a href="home" ng-click="nav.logout()">Logout</a></li>
             <ul class="dropdown-menu">
-                <li><a a href="#woot">Woot</a></li>
+                <li><a a href="#/#woot">Woot</a></li>
                 <li><a a href="#dealgenius">DealGenius</a></li>
                 <li><a a href="#dealgenius">Ebay</a></li>
                 <li><a a href="#dealgenius">Amazon</a></li>
@@ -29,11 +29,13 @@
         </ul>
       </div><!-- /.navbar-collapse -->
 </nav>
-	<section class='login'>
-		<a href='#' ng-click='main.fbLogin()' class='btn'>
-    			<i class="ion-social-facebook"></i>
-				sign up to customize deals shown</a>
-	</section><!--login-->
+	<header id="header" class="container-fluid">
+	    <h3>Browse and buy from many of your favorite daily deal sites</h3>
+	    <h5>For filtered and custom feeds sign in below</h5>
+		<a href='#' ng-click='main.fbLogin()' class='main-btn btn btn-default'>
+				Sign Up</a>
+        <div class="arrow"><i class="ion-arrow-down-c"></i></div>
+	</header><!--login-->
     <div>
        <section id='woot' class='dealsite'>
                <h3 class='sitehead'>WOOT</h3>
@@ -119,6 +121,6 @@
 </div>
 <footer id="footer">
    <div class="container">
-    <p>copywrite John & Jon</p>
+    <p>copyright John & Jon</p>
     </div>
 </footer>
