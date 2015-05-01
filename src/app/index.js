@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('dailysteals', ['restangular', 'ui.router', 'ui.bootstrap'])
+angular.module('dailysteals', ['restangular', 'ui.router', 'ui.bootstrap', 'firebase'])
     .config(function ($stateProvider, $urlRouterProvider) {
         $stateProvider
             .state('home', {
@@ -9,7 +9,7 @@ angular.module('dailysteals', ['restangular', 'ui.router', 'ui.bootstrap'])
                 controller: 'MainCtrl',
                 controllerAs: 'main'
             });
-
+       
         $urlRouterProvider.otherwise('/');
     })
     .config(['RestangularProvider', function (RestangularProvider) {
