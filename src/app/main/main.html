@@ -29,12 +29,12 @@
         </ul>
       </div><!-- /.navbar-collapse -->
 </nav>
+    <div class='thecontainer'>
 	<section class='login'>
 		<a href='#' ng-click='main.fbLogin()' class='btn'>
     			<i class="ion-social-facebook"></i>
 				sign up to customize deals shown</a>
 	</section><!--login-->
-    <div>
        <section id='woot' class='dealsite'>
                <h3 class='sitehead'>WOOT</h3>
                 <div class="site product text-center">
@@ -72,7 +72,7 @@
 	   </section><!--woot-->
 	
         <section id ='dealgenius' class='dealsite'>
-                <h3 class='sitehead'>Deal Genious</h3>    
+                <h3 class='sitehead'>Deal Genius</h3>    
             <div class="site product text-center">
                 <img class="img-responsive" ng-src="{{main.dealgeniusData.image.src}}">
                 <p class="price">{{main.dealgeniusData.price}}</p>    
@@ -116,9 +116,9 @@
                 <a href="{{main.yugsterData.price.href}}" class=" btn btn-hollow">GIMME THAT THING</a>
             </div>
 	   </section><!--ebay-->	   	   
-</div>
+	</div><!--thecontainer -->
 <footer id="footer">
    <div class="container">
-    <p>copywrite John & Jon</p>
+    <p>copyright John and Jon</p>
     </div>
 </footer>
