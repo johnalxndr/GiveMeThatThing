@@ -41,11 +41,9 @@ body {
 .navbar-default .navbar-toggle{
     border-color:white;
     &:hover{
-        background-color: white;
     }
     .icon-bar{
         background-color: white;
-        color: $primary-red;
     }
 }
 #header{
@@ -54,32 +52,29 @@ body {
     padding: 2em;
     margin-top: -2em;
     margin-bottom: -2em;
-    height: 46em;
+    height: 47em;
     h3{
         font-size:1.5em;
         padding-top: 1em;
         color: white;
-        padding-bottom: 3em;
+        padding-bottom: 2em;
     }
     h5{
         padding:1ex;
         color: white;
     }
     .btn{
-        margin-top: 2em;
+        margin-top: 3em;
         background-color: white;
         color: $primary-red;
         border: none;
-        a{
-       
-        }
         i{
             color:blue;
             font-size: 2em;
         }
     }
     .arrow{
-        margin-top: 10em;
+        margin-top: 12em;
         i{
             color: white;
             font-size:3em;
