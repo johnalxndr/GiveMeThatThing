@@ -53,13 +53,14 @@ body {
     margin-top: -2em;
     margin-bottom: -2em;
     height: 47em;
-    h3{
-        font-size:1.5em;
+    h1{
+        text-align: left;
         padding-top: 1em;
         color: white;
         padding-bottom: 2em;
     }
     h5{
+        font-size:1.5em;
         padding:1ex;
         color: white;
     }
@@ -74,7 +75,7 @@ body {
         }
     }
     .arrow{
-        margin-top: 12em;
+        margin-top: 6em;
         i{
             color: white;
             font-size:3em;
@@ -172,6 +173,11 @@ footer{
 .product {
 	width: 48%;
 }
+header{
+    h1{
+        font-size: 3em;
+    }
+}    
 }
 @media (min-width: 1100px) {
 .product {
