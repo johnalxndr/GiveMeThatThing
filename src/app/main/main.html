@@ -10,7 +10,8 @@
         <span class="ion-pricetags"></span> GiveMeThatThing.com
         </a><!-- Nav-header-->
     </div>
-      <div class="collapse navbar-collapse" ng-class="!navCollapsed && 'in'" ng-click="navCollapsed=true">
+      <div class="collapse navbar-collapse" ng-class="!navCollapsed && 'in'" 
+			  ng-click="navCollapsed=true">
         <ul class="nav navbar-nav navbar-right">
             <li><a a href="#/#woot">Woot</a></li>
             <li><a a href="#/#dealgenius">DealGenius</a></li>
@@ -30,8 +31,8 @@
       </div><!-- /.navbar-collapse -->
 </nav>
 	<header id="header" class="container-fluid" ng-show='main.loginbox'>
-	    <h1>Browse and buy from many of your favorite daily deal sites</h1>
-	    <h5>For filtered and custom feeds sign in below</h5>
+	    <h1>Browse and buy from your favorite daily deal sites</h1>
+	    <h5>For custom feeds sign in</h5>
 		<a href='#' ng-click='main.fbLogin()' class='main-btn btn btn-default'>
 				Sign Up</a>
         <div class="arrow"><i class="ion-arrow-down-c"></i></div>
@@ -40,12 +41,14 @@
        <section id='woot' class='dealsite'>
                <h3 class='sitehead'>WOOT</h3>
                 <div class="site product text-center">
-                    <img class="img-responsive" ng-src="{{main.wootData.image.src}}" alt="{{}}">
+                    <img ng-src="{{main.wootData.image.src}}" 
+					alt="{{}}">
                     <p class="price">{{main.wootData.price.text}}</p>
                     <p class="retail"><del>{{main.wootData.retail.text}}</del></p>    
                     <h3>{{main.wootData.title.text}}</h3>
                     <p class="condition">{{main.wootData.condition.text}}</p>
-                    <a href="{{main.wootData.collection1[0].price.href}}" class=" btn btn-hollow">GIMME THAT THING</a>
+                    <a href="{{main.wootData.collection1[0].price.href}}" 
+							class=" btn btn-hollow">GIMME THAT THING</a>
                 </div>
                 <div class="site product text-center">
                     <img class="img-responsive" ng-src="{{main.wootShirtData.image.src}}" alt="{{}}">
