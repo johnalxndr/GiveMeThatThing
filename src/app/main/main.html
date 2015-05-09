@@ -12,14 +12,14 @@
     </div>
       <div class="collapse navbar-collapse" ng-class="!navCollapsed && 'in'" ng-click="navCollapsed=true">
         <ul class="nav navbar-nav navbar-right">
-            <li><a a href="#woot">Woot</a></li>
+            <li><a a href="#/#woot">Woot</a></li>
             <li><a a href="#/#dealgenius">DealGenius</a></li>
             <li><a a href="#/#ebay">Ebay</a></li>
             <li><a a href="#/#amazon">Amazon</a></li>
             <li><a a href="#/#yugster">Yugster</a></li>
             <li><a a href="#" ng-click="main.logout()">Logout</a></li>
             <ul class="dropdown-menu">
-                <li><a a href="#woot">Woot</a></li>
+                <li><a a href="#/#woot">Woot</a></li>
                 <li><a a href="#dealgenius">DealGenius</a></li>
                 <li><a a href="#dealgenius">Ebay</a></li>
                 <li><a a href="#dealgenius">Amazon</a></li>
@@ -29,18 +29,14 @@
         </ul>
       </div><!-- /.navbar-collapse -->
 </nav>
-    <div class='thecontainer'>
-	<section class='login' ng-show='main.loginbox'>
-		<p>
-		If you would like to customize which deal sites you see
-		and receive consolidatd updates create an account.
-		</p>	
-		<a href='#' ng-click='main.fbLogin()' 
-				class='btn'>
-    			<i class="ion-social-facebook"></i>
-				sign up with facebook</a>
-		<a href='#' ng-click='main.loginbox = false'>No thanks I dont want an account</a>
-	</section><!--login-->
+	<header id="header" class="container-fluid" ng-show='main.loginbox'>
+	    <h1>Browse and buy from many of your favorite daily deal sites</h1>
+	    <h5>For filtered and custom feeds sign in below</h5>
+		<a href='#' ng-click='main.fbLogin()' class='main-btn btn btn-default'>
+				Sign Up</a>
+        <div class="arrow"><i class="ion-arrow-down-c"></i></div>
+	</header><!--login-header-->
+    <div>
        <section id='woot' class='dealsite'>
                <h3 class='sitehead'>WOOT</h3>
                 <div class="site product text-center">
