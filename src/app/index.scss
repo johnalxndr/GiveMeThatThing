@@ -162,9 +162,11 @@ footer{
 	.product {
 		width: 48%;
 	}
-	header{
+	#header{
     	h1{
+			text-align: center;
         	font-size: 3em;
+			margin-top: 30vh;
     	}
 	}    
 }//min-width 600 media
