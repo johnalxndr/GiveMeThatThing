@@ -29,7 +29,7 @@
         </ul>
       </div><!-- /.navbar-collapse -->
 </nav>
-	<header id="header" class="container-fluid">
+	<header id="header" class="container-fluid text-center">
 	    <h1>Browse and buy from many of your favorite daily deal sites</h1>
 	    <h5>For filtered and custom feeds sign in below</h5>
 		<a href='#' ng-click='main.fbLogin()' class='main-btn btn btn-default'>
@@ -92,7 +92,7 @@
                 <img class="img-responsive" ng-src="{{main.ebayData.image.src}}">
                 <p class="price">{{main.ebayData.price}}</p>
                 <div class="rectangle"></div>               
-                <h3>{{main.ebayData.title.text}}</h3>
+                <h3>{{main.ebayData.title}}</h3>
                 <p class="condition">{{main.ebayData.condition.text}}</p>
                 <a href="{{main.ebayData.collection1[0].price.href}}" class=" btn btn-hollow">GIMME THAT THING</a>
             </div>
