@@ -2,8 +2,22 @@
 
 angular.module('dailysteals')
 
-.controller('MainCtrl', ['api', function (api) {
+.controller('MainCtrl', ['api', 'Auth', '$firebaseArray','$firebaseObject', 
+	function (api, Auth, $firebaseArray, $firebaseObject) {
     var self = this;
+	this.loginbox = true;
+	this.logout = Auth.logout;
+	Auth.onAuth(function(user){
+		self.user = user;
+	if (user === null){
+		console.log('null');
+	} else {
+		console.log(user);
+	}
+	});
+	if (this.user){
+		this.loginbox = false;
+	}
     api.woot.then(function (data) {
         self.wootData = data.results.collection1[0];
     });
@@ -31,4 +45,13 @@ angular.module('dailysteals')
         api.yugster.then(function (data) {
         self.yugsterData = data.results.collection1[0];  
     });
+    var userInfo = new Firebase('https://givemethatthing.firebaseio.com/users');
+ 
+	this.obj = $firebaseArray(userInfo);
+	console.log(this.obj);
+
+	this.userArray = {};
+	
+	this.fbLogin = Auth.fbLogin;
+
 }]);

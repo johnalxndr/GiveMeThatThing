@@ -53,13 +53,14 @@ body {
     padding: 2em;
     margin-top: -2em;
     margin-bottom: -2em;
-    height: 47em;
+    height: 100vh;
     h1{
         text-align: center;
         padding-top: 1em;
         color: white;
         padding-bottom: 2em;
         font-size: 4ex;
+        padding-bottom: 0.5em;
     }
     h5{
         font-size:1.5em;
@@ -67,7 +68,7 @@ body {
         color: white;
     }
     .btn{
-        margin-top: 3em;
+        margin-top: 1em;
         background-color: white;
         color: $primary-red;
         border: none;
@@ -77,13 +78,13 @@ body {
         }
     }
     .arrow{
-        margin-top: 6em;
+        margin-top: 3em;
         i{
             color: white;
             font-size:3em;
         }
     }
-}
+} //header
 .sitehead {
 	width: 100%;
 	background-color: $gray;
@@ -92,14 +93,6 @@ body {
 	padding-left: 1em;
 	color: $light-gray;
 	text-align: left;
-}
-.img-responsive {
-    margin:0;
-  @media screen and (max-width: 320px) {
-    width: 100px;
-  }
-  @media screen and (min-width: 1200px) {
-  }
 }
 .product {
 	display: inline-block;
@@ -153,6 +146,15 @@ body {
         height: 2.3em;
         overflow: hidden;
     }
+	img {
+		margin: 0 auto;
+		max-height: 10em;
+		max-width: 90%;
+	}
+	h3 {
+		height: 2.3em;
+		overflow: hidden;
+	}
 }
 
 .dealsite {
@@ -184,19 +186,21 @@ footer{
 
 // media queries for tablet and desktop
 @media (min-width: 600px) {
-.product {
-	width: 50%;
-}
-header{
-    h1{
-        font-size: 3em;
-    }
-}    
-}
+	.product {
+		width: 40%;
+	}
+	#header{
+    	h1{
+			text-align: center;
+        	font-size: 3em;
+			margin-top: 30vh;
+    	}
+	}    
+}//min-width 600 media
 @media (min-width: 1100px) {
-.product {
-	width: 25%;
-}
-}
+	.product {
+		width: 28%;
+	}
+}//min-width 1100 media
 // injector
 // endinjector
