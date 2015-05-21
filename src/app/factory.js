@@ -15,7 +15,18 @@ angular.module('dailysteals')
         yugster:Restangular.one('d5ww42ru').get()
     };
 }])
-	.factory('Auth', function($firebaseObject){
+
+
+.factory('Ebayapi', function(Restangular) {
+  return Restangular.withConfig(function(RestangularConfigurer) {
+RestangularConfigurer.setBaseUrl('http://deals.ebay.com/feeds/json');
+    RestangularConfigurer.setDefaultRequestParams({
+        });
+  });
+})
+
+
+.factory('Auth', function($firebaseObject){
 		var auth = new Firebase('https://givemethatthing.firebaseio.com/');
 		var currentUser = {};	
 	return {

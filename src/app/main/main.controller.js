@@ -2,8 +2,8 @@
 
 angular.module('dailysteals')
 
-.controller('MainCtrl', ['api', 'Auth', '$firebaseArray','$firebaseObject', 
-	function (api, Auth, $firebaseArray, $firebaseObject) {
+.controller('MainCtrl', ['api', 'Auth', '$firebaseArray','$firebaseObject','Ebayapi',
+	function (api, Auth, $firebaseArray, $firebaseObject, Ebayapi) {
     var self = this;
 	this.loginbox = true;
 	this.logout = Auth.logout;
@@ -17,7 +17,7 @@ angular.module('dailysteals')
 	});
 	if (this.user){
 		this.loginbox = false;
-	}
+	} 
     api.woot.then(function (data) {
         self.wootData = data.results.collection1[0];
     });
@@ -25,7 +25,7 @@ angular.module('dailysteals')
         self.dealgeniusData = data.results.collection1[0];        
     });
       api.wootshirt.then(function (data) {
-        self.wootShirtData = data.results.collection1[0];
+        self.wootShirtData = data.results.collection1[0]; 
     });
        api.woothome.then(function (data) {
         self.wootHomeData = data.results.collection1[0];
@@ -45,6 +45,15 @@ angular.module('dailysteals')
         api.yugster.then(function (data) {
         self.yugsterData = data.results.collection1[0];  
     });
+        Ebayapi.all('').getList();
+
+        
+        
+            
+     
+        
+
+    
     var userInfo = new Firebase('https://givemethatthing.firebaseio.com/users');
  
 	this.obj = $firebaseArray(userInfo);
@@ -54,4 +63,4 @@ angular.module('dailysteals')
 	
 	this.fbLogin = Auth.fbLogin;
 
-}]);
+}])
