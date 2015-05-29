@@ -45,14 +45,8 @@ angular.module('dailysteals')
         api.yugster.then(function (data) {
         self.yugsterData = data.results.collection1[0];  
     });
-        Ebayapi.all('').getList();
-
+        Ebayapi.all('').getList();  
         
-        
-            
-     
-        
-
     
     var userInfo = new Firebase('https://givemethatthing.firebaseio.com/users');
  

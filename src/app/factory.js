@@ -19,7 +19,7 @@ angular.module('dailysteals')
 
 .factory('Ebayapi', function(Restangular) {
   return Restangular.withConfig(function(RestangularConfigurer) {
-RestangularConfigurer.setBaseUrl('http://deals.ebay.com/feeds/json');
+RestangularConfigurer.setBaseUrl('http://api.epn.ebay.com/deals/v1/country/us/feed/json?campid=5337701233&count=5&offset=&feedtype_id=2&toolid=100034&feedType=json');
     RestangularConfigurer.setDefaultRequestParams({
         });
   });
