@@ -15,7 +15,18 @@ angular.module('dailysteals')
         yugster:Restangular.one('d5ww42ru').get()
     };
 }])
-	.factory('Auth', function($firebaseObject){
+
+
+.factory('Ebayapi', function(Restangular) {
+  return Restangular.withConfig(function(RestangularConfigurer) {
+RestangularConfigurer.setBaseUrl('http://api.epn.ebay.com/deals/v1/country/us/feed/json?campid=5337701233&count=5&offset=&feedtype_id=2&toolid=100034&feedType=json');
+    RestangularConfigurer.setDefaultHeaders({'Access-Control-Allow-Origin': true 
+        });
+  });
+})
+
+
+.factory('Auth', function($firebaseObject){
 		var auth = new Firebase('https://givemethatthing.firebaseio.com/');
 		var currentUser = {};	
 	return {
