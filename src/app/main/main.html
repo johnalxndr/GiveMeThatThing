@@ -80,7 +80,7 @@
                     <div class="rectangle"></div>
                     <span class="label label-default">Woot-Shirt</span>   
                     <h3>{{main.wootShirtData.title.text}}</h3>
-                    <span class="retail"><del>{{main.wootData.retail.text}}</del></span>                                     <p class="condition">{{main.wootShirtData.condition.text}}</p>
+                    <span class="retail"><del>{{main.wootData.retail.text}}</del></span><p class="condition">{{main.wootShirtData.condition.text}}</p>
                     <a href="{{main.wootShirtData.price.href}}" class=" btn btn-hollow">GIMME THAT THING</a>
                 </div>
                 <div class="site product text-center">
@@ -92,6 +92,16 @@
                     <h3>{{main.wootElectronicsData.title.text}}</h3>
                     <p class="condition">{{main.wootElectronicsData.condition.text}}</p>
                     <a href="{{main.wootElectronicsData.price.href}}" class=" btn btn-hollow">GIMME THAT THING</a>
+                 </div>
+                 <div class="site product text-center">
+
+                    <img class="img-responsive" ng-src="{{main.wootComputersData.image.src}}" alt="{{}}">
+                    <p class="price">{{main.wootComputersData.price.text}}</p>
+                    <div class="rectangle"></div>
+                    <span class="label label-default">Woot-Computers</span>   
+                    <h3>{{main.wootComputersData.title.text}}</h3>
+                    <p class="condition">{{main.wootComputersData.condition.text}}</p>
+                    <a href="{{main.wootComputersData.price.href}}" class=" btn btn-hollow">GIMME THAT THING</a>
                  </div>
                 <div class="site product text-center">
                     <img class="img-responsive" ng-src="{{main.wootHomeData.image.src}}" alt="{{}}">
@@ -114,9 +124,22 @@
                 <p class="condition">{{main.dealgeniusData.condition.text}}</p>
                 <a href="{{main.dealgeniusData.url}}" class=" btn btn-hollow">GIMME THAT THING</a>
             </div>
-                 
+
 	   </section><!--dealgenius-->
-   <section id ='ebay' class='dealsite'>
+     
+      <section id ='yugster' class='dealsite'>
+                <h3 class='sitehead'>Yugster</h3>    
+            <div class="site product text-center">
+                <img class="img-responsive" ng-src="{{main.yugsterData.image.src}}">
+                <p class="price">{{main.yugsterData.price}}</p>
+                <div class="rectangle"></div>              
+                <h3>{{main.yugsterData.title}}</h3>
+                <p class="condition">{{main.yugsterData.condition.text}}</p>
+                <a href="{{main.yugsterData.url}}" class=" btn btn-hollow">GIMME THAT THING</a>
+            </div>
+	   </section><!--yugster-->	 
+	     
+       <section id ='ebay' class='dealsite'>
                 <h3 class='sitehead'>Ebay Daily Deals</h3>    
             <div class="site product text-center">
                 <img class="img-responsive" ng-src="{{main.ebayData.image.src}}">
@@ -139,17 +162,7 @@
                 <a href="{{main.amazonData.price.href}}" class=" btn btn-hollow">GIMME THAT THING</a>
             </div>
 	   </section><!--ebay-->
-	    <section id ='yugster' class='dealsite'>
-                <h3 class='sitehead'>Yugster</h3>    
-            <div class="site product text-center">
-                <img class="img-responsive" ng-src="{{main.yugsterData.image.src}}">
-                <p class="price">{{main.yugsterData.price}}</p>
-                <div class="rectangle"></div>              
-                <h3>{{main.yugsterData.title}}</h3>
-                <p class="condition">{{main.yugsterData.condition.text}}</p>
-                <a href="{{main.yugsterData.url}}" class=" btn btn-hollow">GIMME THAT THING</a>
-            </div>
-	   </section><!--ebay-->
+	  
 	</div><!--thecontainer -->
 <footer id="footer">
    <div class="container">
