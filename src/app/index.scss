@@ -77,6 +77,14 @@ body {
             font-size: 2em;
         }
     }
+    #mce-EMAIL{
+        border-radius: 5px;
+        border:none;
+        padding: 5px;
+        &:focus{
+            border:solid green 1px;
+        }
+    }
     .arrow{
         margin-top: 3em;
         i{

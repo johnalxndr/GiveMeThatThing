@@ -18,4 +18,3 @@ angular.module('dailysteals', ['restangular', 'ui.router', 'ui.bootstrap', 'fire
             apikey: 'lxZzI5UKXbWL2JK3DL0U2g2uCfMjFUgd',
         });
 });
-    
