@@ -31,7 +31,8 @@
 </nav>
 	<header id="header" class="container-fluid" ng-show='main.loginbox'>
 	    <h1>Browse and buy from your favorite daily deal sites</h1>
-	    <h5>Want a daily emailed list? Drop Your Email Below</h5>
+	        <a href="#/#woot" class="browse btn btn-default">SHOP NOW</a>
+	    <h5>Want a daily emailed list?</h5>
 <!--
 		<a href='#' ng-click='main.fbLogin()' class='main-btn btn btn-default'>
 				Sign Up</a>
@@ -112,6 +113,24 @@
                     <p class="condition">{{main.wootHomeData.condition.text}}</p>
                     <a href="{{main.wootHomeData.price.href}}" class=" btn btn-hollow">GIMME THAT THING</a>
                 </div>
+                <div class="site product text-center">
+                    <img class="img-responsive" ng-src="{{main.wootToolsGardenData.image.src}}" alt="{{}}">
+                    <p class="price">{{main.wootToolsGardenData.price.text}}</p>
+                    <div class="rectangle"></div>
+                    <span class="label label-default">Woot-Tools / Garden</span>   
+                    <h3>{{main.wootToolsGardenData.title.text}}</h3>
+                    <p class="condition">{{main.wootToolsGardenData.condition.text}}</p>
+                    <a href="{{main.wootToolsGardenData.price.href}}" class=" btn btn-hollow">GIMME THAT THING</a>
+                </div>
+                <div class="site product text-center">
+                    <img class="img-responsive" ng-src="{{main.wootSportData.image.src}}" alt="{{}}">
+                    <p class="price">{{main.wootSportData.price.text}}</p>
+                    <div class="rectangle"></div>
+                    <span class="label label-default">Woot-Sport</span>   
+                    <h3>{{main.wootSportData.title.text}}</h3>
+                    <p class="condition">{{main.wootSportData.condition.text}}</p>
+                    <a href="{{main.wootSportData.price.href}}" class=" btn btn-hollow">GIMME THAT THING</a>
+                </div>
 	   </section><!--woot-->
 	
         <section id ='dealgenius' class='dealsite'>
@@ -166,6 +185,7 @@
 	</div><!--thecontainer -->
 <footer id="footer">
    <div class="container">
-    <p>copyright John and Jon</p>
+       <p>For Feedback Or Questions</p> 
+       <a href="mailto:jalexander788@gmail.com"><i class="ion-email"></i></a>
     </div>
 </footer>

@@ -11,6 +11,7 @@ angular.module('dailysteals')
         wootsport: Restangular.one('8vsr5cbi').get(),
         woothome: Restangular.one('1wvn1eqw').get(),
         wootcomputers: Restangular.one('ebxbpc0e').get(),
+        woottoolsgarden: Restangular.one('42u4f4ew').get(),
         ebay:Restangular.one('6mt8zb5y').get(),
         amazon:Restangular.one('3oned4iq').get(),
         yugster:Restangular.one('d5ww42ru').get()

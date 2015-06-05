@@ -39,6 +39,9 @@ angular.module('dailysteals')
         api.wootcomputers.then(function (data) {
         self.wootComputersData = data.results.collection1[0];
     });
+        api.woottoolsgarden.then(function (data) {
+        self.wootToolsGardenData = data.results.collection1[0];
+    });
         api.ebay.then(function (data) {
         self.ebayData = data.results.collection1[0];  
     });
@@ -49,7 +52,7 @@ angular.module('dailysteals')
         self.yugsterData = data.results.collection1[0];  
     });
         Ebayapi.all('').getList(); 
-        console.log(Ebayapi)
+        console.log(0)
     
     var userInfo = new Firebase('https://givemethatthing.firebaseio.com/users');
  
