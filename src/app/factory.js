@@ -10,12 +10,25 @@ angular.module('dailysteals')
         wootshirt: Restangular.one('7uigadhy').get(),
         wootsport: Restangular.one('8vsr5cbi').get(),
         woothome: Restangular.one('1wvn1eqw').get(),
+        wootcomputers: Restangular.one('ebxbpc0e').get(),
+        woottoolsgarden: Restangular.one('42u4f4ew').get(),
         ebay:Restangular.one('6mt8zb5y').get(),
         amazon:Restangular.one('3oned4iq').get(),
         yugster:Restangular.one('d5ww42ru').get()
     };
 }])
-	.factory('Auth', function($firebaseObject){
+
+
+.factory('Ebayapi', function(Restangular) {
+  return Restangular.withConfig(function(RestangularConfigurer) {
+RestangularConfigurer.setBaseUrl('http://api.epn.ebay.com/deals/v1/country/us/feed/json?campid=5337701233&count=5&offset=&feedtype_id=2&toolid=100034&feedType=json');
+    RestangularConfigurer.setDefaultRequestParams({ 
+        });
+  });
+})
+
+
+.factory('Auth', function($firebaseObject){
 		var auth = new Firebase('https://givemethatthing.firebaseio.com/');
 		var currentUser = {};	
 	return {

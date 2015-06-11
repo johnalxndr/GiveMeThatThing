@@ -4,6 +4,7 @@ $primary-red:#D44557;
 $secondary-red:#AD4522;
 $primary-gray:#2C343B;
 $gray:#54626C;
+$green:#25C199;
 $light-gray:#C1CBCD;
 $headtxt: #FFFFFF;
 $background:#f7f7f7;
@@ -54,13 +55,24 @@ body {
     margin-top: -2em;
     margin-bottom: -2em;
     height: 100vh;
-    h1{
-        text-align: left;
+    h1{        
+        text-align: center;
         color: white;
-        padding-bottom: 0.5em;
+        font-size: 3ex;
+        margin-top: 2em;
+    }
+    a.browse{
+        margin-top: 3em;
+        margin-bottom: 6em;
+        background-color: #25C199;
+        padding: 1em 4em 1em 4em;
+        &:hover{
+            background-color: darken($green, 5%);
+        }
+    
     }
     h5{
-        font-size:1.5em;
+        font-size:2ex;
         padding:1ex;
         color: white;
     }
@@ -72,6 +84,14 @@ body {
         i{
             color:blue;
             font-size: 2em;
+        }
+    }
+    #mce-EMAIL{
+        border-radius: 5px;
+        border:none;
+        padding: 5px;
+        &:focus{
+            border:solid green 1px;
         }
     }
     .arrow{
@@ -130,6 +150,21 @@ body {
       left: -18px;
       z-index: -1;
     }
+    .label {
+      display: inline;
+      padding: .2em .6em .3em;
+      font-size: 75%;
+      font-weight: bold;
+      line-height: 1;
+      color: #fff;
+      text-align: center;
+      white-space: nowrap;
+      vertical-align: baseline;
+      border-radius: .25em;
+      position: absolute;
+      right: 23px;
+      top: 16px;
+    }
     .retail{
         color: $primary-red;
         font-size: 2.5ex;
@@ -169,15 +204,23 @@ body {
         color: white;
     }
 }
-
+.label{
+    background-color: $green;
+}
+// Footer 
 footer{
     background-color: $light-gray;
+    text-align: center;
+    padding:2em;
     p{
+        font-size: 2ex;
         color: $primary-red;
-        padding:2em;
+        text-align: center;
     }
 }
-
+footer > div > a > i{
+    font-size:3em;
+}
 
 
 
@@ -190,14 +233,37 @@ footer{
     	h1{
 			text-align: center;
         	font-size: 3em;
-			margin-top: 30vh;
+			margin-top: 3em;
     	}
+        .browse{
+            margin-top: 3em;
+        }
+        h5{
+            margin-top: -1em;
+        }
 	}    
 }//min-width 600 media
 @media (min-width: 1100px) {
 	.product {
 		width: 28%;
 	}
-}//min-width 1100 media
+}
+
+// below fixes white space problem on iphone
+@media
+only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5){
+
+  html,
+  body{
+    width:100%;
+    overflow-x:hidden;
+  }
+
+}
+
+//min-width 1100 media
 // injector
 // endinjector

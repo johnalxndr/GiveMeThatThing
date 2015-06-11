@@ -9,12 +9,12 @@ angular.module('dailysteals', ['restangular', 'ui.router', 'ui.bootstrap', 'fire
                 controller: 'MainCtrl',
                 controllerAs: 'main'
             });
-       
+
         $urlRouterProvider.otherwise('/');
     })
-    .config(['RestangularProvider', function (RestangularProvider) {
+    .config(function (RestangularProvider) {
         RestangularProvider.setBaseUrl('https://www.kimonolabs.com/api/');
         RestangularProvider.setDefaultRequestParams({
             apikey: 'lxZzI5UKXbWL2JK3DL0U2g2uCfMjFUgd',
         });
-}]);
+    });

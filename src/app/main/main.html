@@ -10,14 +10,13 @@
         <span class="ion-pricetags"></span> GiveMeThatThing.com
         </a><!-- Nav-header-->
     </div>
-      <div class="collapse navbar-collapse" ng-class="!navCollapsed && 'in'" 
-			  ng-click="navCollapsed=true">
-        <ul class="nav navbar-nav navbar-right">
-            <li><a a href="#/#woot">Woot</a></li>
-            <li><a a href="#/#dealgenius">DealGenius</a></li>
-            <li><a a href="#/#ebay">Ebay</a></li>
-            <li><a a href="#/#amazon">Amazon</a></li>
-            <li><a a href="#/#yugster">Yugster</a></li>
+      <div class="collapse navbar-collapse" ng-class="!navCollapsed && 'in'" ng-click="navCollapsed=true">
+        <ul class="nav navbar-nav navbar-right container-fluid">
+            <li><a a href="#woot">Woot</a></li>
+            <li><a a href="#dealgenius">DealGenius</a></li>
+            <li><a a href="#ebay">Ebay</a></li>
+            <li><a a href="#amazon">Amazon</a></li>
+            <li><a a href="#yugster">Yugster</a></li>
             <li><a a href="#" ng-click="main.logout()">Logout</a></li>
             <ul class="dropdown-menu">
                 <li><a a href="#/#woot">Woot</a></li>
@@ -32,9 +31,36 @@
 </nav>
 	<header id="header" class="container-fluid" ng-show='main.loginbox'>
 	    <h1>Browse and buy from your favorite daily deal sites</h1>
-	    <h5>For custom feeds sign in</h5>
+	        <a href="#woot" class="browse btn btn-default">SHOP NOW</a>
+	    <h5>Want a daily emailed list?</h5>
+<!--
 		<a href='#' ng-click='main.fbLogin()' class='main-btn btn btn-default'>
 				Sign Up</a>
+-->
+       
+       
+        <!-- Begin MailChimp Signup Form -->
+        <div id="mc_embed_signup">
+        <form action="//GiveMeThatThing.us6.list-manage.com/subscribe/post?u=2a57954478b035e6897115464&amp;id=d1b3d996a1" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+            <div id="mc_embed_signup_scroll">
+
+        <div class="mc-field-group">
+            <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+        </div>
+            <div id="mce-responses" class="clear">
+                <div class="response" id="mce-error-response" style="display:none"></div>
+                <div class="response" id="mce-success-response" style="display:none"></div>
+            </div>    
+            
+            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;"><input type="text" name="b_2a57954478b035e6897115464_d1b3d996a1" tabindex="-1" value=""></div>
+            <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn"></div>
+            </div>
+        </form>
+        </div>
+        <!--End mc_embed_signup-->
+        
+        
         <div class="arrow"><i class="ion-arrow-down-c"></i></div>
 	</header><!--login-header-->
     <div>
@@ -43,18 +69,19 @@
                 <div class="site product text-center">
                     <img class="img-responsive" ng-src="{{main.wootData.image.src}}" alt="{{}}">
                     <p class="price">{{main.wootData.price.text}}</p>   
-                    <div class="rectangle"></div>   
+                    <div class="rectangle"></div>
                     <h3>{{main.wootData.title.text}}</h3>
                     <p class="condition">{{main.wootData.condition.text}}</p>
-                    <a href="{{main.wootData.collection1[0].price.href}}" 
+                    <a href="{{main.wootData.price.href}}" 
 							class=" btn btn-hollow">GIMME THAT THING</a>
                 </div>
                 <div class="site product text-center">
                     <img class="img-responsive" ng-src="{{main.wootShirtData.image.src}}" alt="{{}}">
                     <p class="price">{{main.wootShirtData.price.text}}</p>
                     <div class="rectangle"></div>
+                    <span class="label label-default">Woot-Shirt</span>   
                     <h3>{{main.wootShirtData.title.text}}</h3>
-                    <span class="retail"><del>{{main.wootData.retail.text}}</del></span>                                     <p class="condition">{{main.wootShirtData.condition.text}}</p>
+                    <span class="retail"><del>{{main.wootData.retail.text}}</del></span><p class="condition">{{main.wootShirtData.condition.text}}</p>
                     <a href="{{main.wootShirtData.price.href}}" class=" btn btn-hollow">GIMME THAT THING</a>
                 </div>
                 <div class="site product text-center">
@@ -62,39 +89,82 @@
                     <img class="img-responsive" ng-src="{{main.wootElectronicsData.image.src}}" alt="{{}}">
                     <p class="price">{{main.wootElectronicsData.price.text}}</p>
                     <div class="rectangle"></div>
+                    <span class="label label-default">Woot-Electronics</span>   
                     <h3>{{main.wootElectronicsData.title.text}}</h3>
                     <p class="condition">{{main.wootElectronicsData.condition.text}}</p>
                     <a href="{{main.wootElectronicsData.price.href}}" class=" btn btn-hollow">GIMME THAT THING</a>
+                 </div>
+                 <div class="site product text-center">
+
+                    <img class="img-responsive" ng-src="{{main.wootComputersData.image.src}}" alt="{{}}">
+                    <p class="price">{{main.wootComputersData.price.text}}</p>
+                    <div class="rectangle"></div>
+                    <span class="label label-default">Woot-Computers</span>   
+                    <h3>{{main.wootComputersData.title.text}}</h3>
+                    <p class="condition">{{main.wootComputersData.condition.text}}</p>
+                    <a href="{{main.wootComputersData.price.href}}" class=" btn btn-hollow">GIMME THAT THING</a>
                  </div>
                 <div class="site product text-center">
                     <img class="img-responsive" ng-src="{{main.wootHomeData.image.src}}" alt="{{}}">
                     <p class="price">{{main.wootHomeData.price.text}}</p>
                     <div class="rectangle"></div>
+                    <span class="label label-default">Woot-Home</span>   
                     <h3>{{main.wootHomeData.title.text}}</h3>
                     <p class="condition">{{main.wootHomeData.condition.text}}</p>
                     <a href="{{main.wootHomeData.price.href}}" class=" btn btn-hollow">GIMME THAT THING</a>
+                </div>
+                <div class="site product text-center">
+                    <img class="img-responsive" ng-src="{{main.wootToolsGardenData.image.src}}" alt="{{}}">
+                    <p class="price">{{main.wootToolsGardenData.price.text}}</p>
+                    <div class="rectangle"></div>
+                    <span class="label label-default">Woot-Tools / Garden</span>   
+                    <h3>{{main.wootToolsGardenData.title.text}}</h3>
+                    <p class="condition">{{main.wootToolsGardenData.condition.text}}</p>
+                    <a href="{{main.wootToolsGardenData.price.href}}" class=" btn btn-hollow">GIMME THAT THING</a>
+                </div>
+                <div class="site product text-center">
+                    <img class="img-responsive" ng-src="{{main.wootSportData.image.src}}" alt="{{}}">
+                    <p class="price">{{main.wootSportData.price.text}}</p>
+                    <div class="rectangle"></div>
+                    <span class="label label-default">Woot-Sport</span>   
+                    <h3>{{main.wootSportData.title.text}}</h3>
+                    <p class="condition">{{main.wootSportData.condition.text}}</p>
+                    <a href="{{main.wootSportData.price.href}}" class=" btn btn-hollow">GIMME THAT THING</a>
                 </div>
 	   </section><!--woot-->
 	
         <section id ='dealgenius' class='dealsite'>
                 <h3 class='sitehead'>Deal Genius</h3>    
             <div class="site product text-center">
-                <img class="img-responsive" ng-src="{{main.dealgeniusData.image.src}}">
+                <img class="img-responsive" ng-src="{{main.dealgeniusData.image.href}}">
                 <p class="price">{{main.dealgeniusData.price}}</p>        
                 <div class="rectangle"></div>
                 <h3>{{main.dealgeniusData.title}}</h3>
                 <p class="condition">{{main.dealgeniusData.condition.text}}</p>
-                <a href="{{main.dealgeniusData.collection1[0].price.href}}" class=" btn btn-hollow">GIMME THAT THING</a>
+                <a href="{{main.dealgeniusData.url}}" class=" btn btn-hollow">GIMME THAT THING</a>
             </div>
-                 
+
 	   </section><!--dealgenius-->
-   <section id ='ebay' class='dealsite'>
+     
+      <section id ='yugster' class='dealsite'>
+                <h3 class='sitehead'>Yugster</h3>    
+            <div class="site product text-center">
+                <img class="img-responsive" ng-src="{{main.yugsterData.image.src}}">
+                <p class="price">{{main.yugsterData.price}}</p>
+                <div class="rectangle"></div>              
+                <h3>{{main.yugsterData.title}}</h3>
+                <p class="condition">{{main.yugsterData.condition.text}}</p>
+                <a href="{{main.yugsterData.url}}" class=" btn btn-hollow">GIMME THAT THING</a>
+            </div>
+	   </section><!--yugster-->	 
+	     
+       <section id ='ebay' class='dealsite'>
                 <h3 class='sitehead'>Ebay Daily Deals</h3>    
             <div class="site product text-center">
                 <img class="img-responsive" ng-src="{{main.ebayData.image.src}}">
                 <p class="price">{{main.ebayData.price}}</p>
                 <div class="rectangle"></div>               
-                <h3>{{main.ebayData.title.text}}</h3>
+                <h3>{{main.ebayData.title}}</h3>
                 <p class="condition">{{main.ebayData.condition.text}}</p>
                 <a href="{{main.ebayData.collection1[0].price.href}}" class=" btn btn-hollow">GIMME THAT THING</a>
             </div>
@@ -103,7 +173,7 @@
        <section id ='amazon' class='dealsite'>
                 <h3 class='sitehead'>Amazon</h3>    
             <div class="site product text-center">
-                <img class="img-responsive" ng-src="{{main.amazonData.image.src}}">
+                <img class="img-responsive" ng-src="{{main.amazonData.image.src}">
                 <p class="price">{{main.amazonData.price}}</p>
                 <div class="rectangle"></div>
                 <h3>{{main.amazonData.title}}</h3>
@@ -111,20 +181,11 @@
                 <a href="{{main.amazonData.price.href}}" class=" btn btn-hollow">GIMME THAT THING</a>
             </div>
 	   </section><!--ebay-->
-	    <section id ='yugster' class='dealsite'>
-                <h3 class='sitehead'>Yugster</h3>    
-            <div class="site product text-center">
-                <img class="img-responsive" ng-src="{{main.yugsterData.image.src}}">
-                <p class="price">{{main.yugsterData.price}}</p>
-                <div class="rectangle"></div>              
-                <h3>{{main.yugsterData.title}}</h3>
-                <p class="condition">{{main.yugsterData.condition.text}}</p>
-                <a href="{{main.yugsterData.price.href}}" class=" btn btn-hollow">GIMME THAT THING</a>
-            </div>
-	   </section><!--ebay-->	   	   
+	  
 	</div><!--thecontainer -->
 <footer id="footer">
    <div class="container">
-    <p>copyright John and Jon</p>
+       <p>For Feedback Or Questions</p> 
+       <a href="mailto:jalexander788@gmail.com"><i class="ion-email"></i></a>
     </div>
 </footer>
