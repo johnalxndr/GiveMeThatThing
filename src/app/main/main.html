@@ -12,11 +12,11 @@
     </div>
       <div class="collapse navbar-collapse" ng-class="!navCollapsed && 'in'" ng-click="navCollapsed=true">
         <ul class="nav navbar-nav navbar-right container-fluid">
-            <li><a a href="#/#woot">Woot</a></li>
-            <li><a a href="#/#dealgenius">DealGenius</a></li>
-            <li><a a href="#/#ebay">Ebay</a></li>
-            <li><a a href="#/#amazon">Amazon</a></li>
-            <li><a a href="#/#yugster">Yugster</a></li>
+            <li><a a href="#woot">Woot</a></li>
+            <li><a a href="#dealgenius">DealGenius</a></li>
+            <li><a a href="#ebay">Ebay</a></li>
+            <li><a a href="#amazon">Amazon</a></li>
+            <li><a a href="#yugster">Yugster</a></li>
             <li><a a href="#" ng-click="main.logout()">Logout</a></li>
             <ul class="dropdown-menu">
                 <li><a a href="#/#woot">Woot</a></li>
@@ -31,7 +31,7 @@
 </nav>
 	<header id="header" class="container-fluid" ng-show='main.loginbox'>
 	    <h1>Browse and buy from your favorite daily deal sites</h1>
-	        <a href="#/#woot" class="browse btn btn-default">SHOP NOW</a>
+	        <a href="#woot" class="browse btn btn-default">SHOP NOW</a>
 	    <h5>Want a daily emailed list?</h5>
 <!--
 		<a href='#' ng-click='main.fbLogin()' class='main-btn btn btn-default'>
@@ -173,7 +173,7 @@
        <section id ='amazon' class='dealsite'>
                 <h3 class='sitehead'>Amazon</h3>    
             <div class="site product text-center">
-                <img class="img-responsive" ng-src="{{main.amazonData.image}">
+                <img class="img-responsive" ng-src="{{main.amazonData.image.src}">
                 <p class="price">{{main.amazonData.price}}</p>
                 <div class="rectangle"></div>
                 <h3>{{main.amazonData.title}}</h3>
