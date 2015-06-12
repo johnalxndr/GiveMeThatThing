@@ -70,6 +70,7 @@
                     <img class="img-responsive" ng-src="{{main.wootData.image.src}}" alt="{{}}">
                     <p class="price">{{main.wootData.price.text}}</p>   
                     <div class="rectangle"></div>
+                    <p class="retail" ng-show="!main.wootData.retail.text"><br></p>                    
                     <p class="retail">{{main.wootData.retail.text}}</p>
                     <h3>{{main.wootData.title.text}}</h3>
                     <p class="condition">{{main.wootData.condition.text}}</p>
@@ -80,6 +81,7 @@
                     <img class="img-responsive" ng-src="{{main.wootShirtData.image.src}}" alt="{{}}">
                     <p class="price">{{main.wootShirtData.price.text}}</p>
                     <div class="rectangle"></div>
+                    <p class="retail" ng-show="!main.wootShirtData.retail.text"><br></p>                    
                     <p class="retail">{{main.wootShirtData.retail.text}}</p>
                     <span class="label label-default">Woot-Shirt</span>   
                     <h3>{{main.wootShirtData.title.text}}</h3>
@@ -92,6 +94,7 @@
                     <img class="img-responsive" ng-src="{{main.wootElectronicsData.image.src}}" alt="{{}}">
                     <p class="price">{{main.wootElectronicsData.price.text}}</p>
                     <div class="rectangle"></div>
+                    <p class="retail" ng-show="!main.wootElectronicsData.retail.text"><br></p>                    
                     <p class="retail"><del>{{main.wootElectronicsData.retail.text}}</del></p>                    
                     <span class="label label-default">Woot-Electronics</span>   
                     <h3>{{main.wootElectronicsData.title.text}}</h3>
@@ -103,6 +106,7 @@
                     <img class="img-responsive" ng-src="{{main.wootComputersData.image.src}}" alt="{{}}">
                     <p class="price">{{main.wootComputersData.price.text}}</p>
                     <div class="rectangle"></div>
+                    <p class="retail" ng-show="!main.wootComputersData.retail.text"><br></p>
                     <p class="retail"><del>{{main.wootComputersData.retail.text}}</del></p>                              
                     <span class="label label-default">Woot-Computers</span>   
                     <h3>{{main.wootComputersData.title.text}}</h3>
@@ -113,6 +117,7 @@
                     <img class="img-responsive" ng-src="{{main.wootHomeData.image.src}}" alt="{{}}">
                     <p class="price">{{main.wootHomeData.price.text}}</p>
                     <div class="rectangle"></div>
+                    <p class="retail" ng-show="!main.wootHomeData.retail.text"><br></p>
                     <p class="retail"><del>{{main.wootHomeData.retail.text}}</del></p>                    
                     <span class="label label-default">Woot-Home</span>   
                     <h3>{{main.wootHomeData.title.text}}</h3>
@@ -122,7 +127,8 @@
                 <div class="site product text-center">
                     <img class="img-responsive" ng-src="{{main.wootToolsGardenData.image.src}}" alt="{{}}">
                     <p class="price">{{main.wootToolsGardenData.price.text}}</p>
-                    <div class="rectangle"></div>            
+                    <div class="rectangle"></div> 
+                    <p class="retail" ng-show="!main.wootToolsGardenData.retail.text"><br></p>                            
                     <p class="retail"><del>{{main.wootToolsGardenData.retail.text}}</del></p>                    
                     <span class="label label-default">Woot-Tools / Garden</span>   
                     <h3>{{main.wootToolsGardenData.title.text}}</h3>
@@ -133,6 +139,7 @@
                     <img class="img-responsive" ng-src="{{main.wootSportData.image.src}}" alt="{{}}">
                     <p class="price">{{main.wootSportData.price.text}}</p>
                     <div class="rectangle"></div>
+                    <p class="retail" ng-show="!main.wootSportsData.retail.text"><br></p>                    
                     <p class="retail"><del>{{main.wootSportData.retail.text}}</del></p>                    
                     <span class="label label-default">Woot-Sport</span>   
                     <h3>{{main.wootSportData.title.text}}</h3>
