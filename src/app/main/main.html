@@ -14,17 +14,17 @@
         <ul class="nav navbar-nav navbar-right container-fluid">
             <li><a a href="#woot">Woot</a></li>
             <li><a a href="#dealgenius">DealGenius</a></li>
+            <li><a a href="#yugster">Yugster</a></li>
             <li><a a href="#ebay">Ebay</a></li>
             <li><a a href="#amazon">Amazon</a></li>
-            <li><a a href="#yugster">Yugster</a></li>
-            <li><a a href="#" ng-click="main.logout()">Logout</a></li>
+            <li><a a href="#" ng-click="main.logout()"></a></li>
             <ul class="dropdown-menu">
                 <li><a a href="#/#woot">Woot</a></li>
-                <li><a a href="#dealgenius">DealGenius</a></li>
-                <li><a a href="#dealgenius">Ebay</a></li>
-                <li><a a href="#dealgenius">Amazon</a></li>
-                <li><a a href="#dealgenius">Yugster</a></li>
-                <li><a a href="#" ng-click="main.logout()">Logout</a></li>
+                <li><a a href="#/#dealgenius">DealGenius</a></li>
+                <li><a a href="#/#yugster">Yugster</a></li>
+                <li><a a href="#/#ebay">Ebay</a></li>
+                <li><a a href="#/#amazon">Amazon</a></li>
+                <li><a a href="#" ng-click="main.logout()"></a></li>
             </ul>
         </ul>
       </div><!-- /.navbar-collapse -->
@@ -32,7 +32,7 @@
 	<header id="header" class="container-fluid" ng-show='main.loginbox'>
 	    <h1>Browse and buy from your favorite daily deal sites</h1>
 	        <a href="#woot" class="browse btn btn-default">SHOP NOW</a>
-	    <h5>Want a daily emailed list?</h5>
+	    <h5>Stay Updated On New Sites Added?</h5>
 <!--
 		<a href='#' ng-click='main.fbLogin()' class='main-btn btn btn-default'>
 				Sign Up</a>
@@ -45,7 +45,7 @@
             <div id="mc_embed_signup_scroll">
 
         <div class="mc-field-group">
-            <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+            <input type="email" value="Email Here" name="EMAIL" class="required email" id="mce-EMAIL">
         </div>
             <div id="mce-responses" class="clear">
                 <div class="response" id="mce-error-response" style="display:none"></div>
@@ -176,7 +176,8 @@
 	   </section><!--yugster-->	 
 	     
        <section id ='ebay' class='dealsite'>
-                <h3 class='sitehead'>Ebay Daily Deals</h3>    
+                <h3 class='sitehead'>Ebay Daily Deals (coming soon) </h3>    
+<!--
             <div class="site product text-center">
                 <img class="img-responsive" ng-src="{{main.ebayData.image.src}}">
                 <p class="price">{{main.ebayData.price}}</p>
@@ -185,10 +186,12 @@
                 <p class="condition">{{main.ebayData.condition.text}}</p>
                 <a href="{{main.ebayData.collection1[0].price.href}}" class=" btn btn-hollow">GIMME THAT THING</a>
             </div>
+-->
 	   </section><!--ebay-->
   
        <section id ='amazon' class='dealsite'>
-                <h3 class='sitehead'>Amazon Daily Deals</h3>    
+                <h3 class='sitehead'>Amazon Daily Deals (coming soon) </h3>    
+<!--
             <div class="site product text-center">
                 <img class="img-responsive" ng-src="{{main.amazonData.image.src}">
                 <p class="price">{{main.amazonData.price}}</p>
@@ -197,6 +200,7 @@
                 <p class="condition">{{main.amazonData.condition.text}}</p>
                 <a href="{{main.amazonData.price.href}}" class=" btn btn-hollow">GIMME THAT THING</a>
             </div>
+-->
 	   </section><!--amazon-->
 	  
 	</div><!--thecontainer -->
