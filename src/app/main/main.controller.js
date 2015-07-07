@@ -2,14 +2,14 @@
 
 angular.module('dailysteals')
 
-.controller('MainCtrl', ['api', 'Auth', '$firebaseArray','$firebaseObject','Ebayapi',
-	function (api, Auth, $firebaseArray, $firebaseObject, Ebayapi) {
+.controller('MainCtrl', ['api', 'Auth', '$firebaseArray','$firebaseObject',
+	function (api, Auth, $firebaseArray, $firebaseObject) {
     var self = this;
    
 //Slow Scroll 
         $(function() {
   $('a[href*=#]:not([href=#])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+    if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname) {
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
       if (target.length) {
@@ -73,16 +73,16 @@ var userInfo = new Firebase('https://givemethatthing.firebaseio.com/users');
         api.woottoolsgarden.then(function (data) {
         self.wootToolsGardenData = data.results.collection1[0];
     });
-        api.ebay.then(function (data) {
-        self.ebayData = data.results.collection1[0];  
-    });
+//        api.ebay.then(function (data) {
+//        self.ebayData = data.results.collection1[0];  
+//    });
         api.amazon.then(function (data) {
         self.amazonData = data.results.collection1[0];  
     });
         api.yugster.then(function (data) {
         self.yugsterData = data.results.collection1[0];  
     });
-        Ebayapi.all('').getList(); 
-        console.log(0)
+//        Ebayapi.all('').getList(); 
+//        console.log(0)
 //End API CALLS     
 }])
