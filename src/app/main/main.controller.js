@@ -48,36 +48,7 @@ var userInfo = new Firebase('https://givemethatthing.firebaseio.com/users');
     
 //End FB Log in      
         
-//Start Kimono API Call        
         api.woot.then(function (data) {
         self.wootData = data.results.collection1[0];
     });
-        api.dealgenius.then(function (data) {
-        self.dealgeniusData = data.results.collection1[0];        
-    });
-        api.wootshirt.then(function (data) {
-        self.wootShirtData = data.results.collection1[0]; 
-    });
-        api.woothome.then(function (data) {
-        self.wootHomeData = data.results.collection1[0];
-    });
-        api.wootsport.then(function (data) {
-        self.wootSportData = data.results.collection1[0];
-    });
-       api.wootelectronics.then(function (data) {
-        self.wootElectronicsData = data.results.collection1[0];
-    });
-        api.wootcomputers.then(function (data) {
-        self.wootComputersData = data.results.collection1[0];
-    });
-        api.woottoolsgarden.then(function (data) {
-        self.wootToolsGardenData = data.results.collection1[0];
-    });
-        api.amazon.then(function (data) {
-        self.amazonData = data.results.collection1[0];  
-    });
-        api.yugster.then(function (data) {
-        self.yugsterData = data.results.collection1[0];  
-    });
-//End API CALLS     
 }])

@@ -13,18 +13,13 @@ angular.module('dailysteals', ['restangular', 'ui.router', 'ui.bootstrap', 'fire
         $urlRouterProvider.otherwise('/');
     })
     .config(function (RestangularProvider) {
-        RestangularProvider.setBaseUrl('https://www.kimonolabs.com/api/');
+        RestangularProvider.setBaseUrl('http://api.woot.com/2/events.json');
         RestangularProvider.setDefaultRequestParams({
-            apikey: 'lxZzI5UKXbWL2JK3DL0U2g2uCfMjFUgd',
-        });
-    })
-    .config(function (RestangularProvider) {
-        RestangularProvider.setBaseUrl('http://api.woot.com/2/events.json?site=www.woot.com&eventType=Daily');
-        RestangularProvider.setDefaultRequestParams({
+            eventType: 'Daily',
             key: 'aec95152c1c742328ccfb666ffe29e61',
-        })
-});
-//Ebay API 
+        });
+    });
+
 $(document).ready(function(){
 $.ajax({
   type:'GET',
