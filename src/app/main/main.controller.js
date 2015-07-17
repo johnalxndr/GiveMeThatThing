@@ -21,7 +21,7 @@ angular.module('dailysteals')
     }
   });
 });
-//End Slow Scroll         
+//End Slow Scrol         
   
 //Facebook Log in         
 	this.loginbox = true;
