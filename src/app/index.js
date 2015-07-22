@@ -12,9 +12,8 @@ angular.module('dailysteals', ['restangular', 'ui.router', 'ui.bootstrap', 'fire
 
         $urlRouterProvider.otherwise('/');
     })
-    .config(function (RestangularProvider) {
-RestangularProvider.setBaseUrl('http://api.woot.com/2/events.json');
-    });
+
+//Ebay deals Api 
 
 $(document).ready(function(){
 $.ajax({

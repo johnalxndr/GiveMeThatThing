@@ -3,7 +3,7 @@
 angular.module('dailysteals')
 
 .controller('MainCtrl', ['api', 'Auth', '$firebaseArray','$firebaseObject',
-	function (api, Auth, $firebaseArray, $firebaseObject) {
+	function (restangular, Auth, $firebaseArray, $firebaseObject) {
     var self = this;
    
 //Slow Scroll 
@@ -48,7 +48,7 @@ var userInfo = new Firebase('https://givemethatthing.firebaseio.com/users');
     
 //End FB Log in      
         
-        api.woot.then(function (data) {
-        self.wootData = data.results.collection1[0];
+        restangular.getlist().then(function (data) {
+            console.log(data); 
     });
 }])
