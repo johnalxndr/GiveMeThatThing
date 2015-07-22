@@ -13,11 +13,7 @@ angular.module('dailysteals', ['restangular', 'ui.router', 'ui.bootstrap', 'fire
         $urlRouterProvider.otherwise('/');
     })
     .config(function (RestangularProvider) {
-        RestangularProvider.setBaseUrl('http://api.woot.com/2/events.json');
-        RestangularProvider.setDefaultRequestParams({
-            eventType: 'Daily',
-            key: 'aec95152c1c742328ccfb666ffe29e61',
-        });
+RestangularProvider.setBaseUrl('http://api.woot.com/2/events.json');
     });
 
 $(document).ready(function(){
