@@ -2,12 +2,15 @@
 
 angular.module('dailysteals')
 
-.controller('MainCtrl', ['api', 'Auth', '$firebaseArray','$firebaseObject',
-	function (restangular, Auth, $firebaseArray, $firebaseObject) {
+.controller('MainCtrl', ['Auth','$firebaseArray','$firebaseObject',
+	function (Restangular, Auth, $firebaseArray, $firebaseObject) {
     var self = this;
    
+Restangular.getList().then(function (wootData) {
+            console.log(wootData); 
+    });
 //Slow Scroll 
-        $(function() {
+$(function() {
   $('a[href*=#]:not([href=#])').click(function() {
     if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname) {
       var target = $(this.hash);
@@ -47,8 +50,4 @@ var userInfo = new Firebase('https://givemethatthing.firebaseio.com/users');
 	this.fbLogin = Auth.fbLogin;
     
 //End FB Log in      
-        
-        restangular.getlist().then(function (data) {
-            console.log(data); 
-    });
 }])

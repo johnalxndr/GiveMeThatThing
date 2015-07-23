@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('dailysteals', ['restangular', 'ui.router', 'ui.bootstrap', 'firebase'])
+angular.module('dailysteals', ['restangular','ui.router', 'ui.bootstrap', 'firebase'])
     .config(function ($stateProvider, $urlRouterProvider) {
         $stateProvider
             .state('home', {
