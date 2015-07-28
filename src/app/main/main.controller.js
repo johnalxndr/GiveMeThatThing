@@ -2,13 +2,13 @@
 
 angular.module('dailysteals')
 
-.controller('MainCtrl', ['Auth','$firebaseArray','$firebaseObject',
-	function (Restangular, Auth, $firebaseArray, $firebaseObject) {
+.controller('MainCtrl', ['Auth','$firebaseArray','$firebaseObject','wootstuff',
+	function (Restangular, Auth, $firebaseArray, $firebaseObject,wootstuff) {
     var self = this;
-   
-Restangular.getList().then(function (wootData) {
-            console.log(wootData); 
-    });
+        wootstuff.woot.then(function(data){
+            self.wootData = data;
+            console.log(data);
+        })
 //Slow Scroll 
 $(function() {
   $('a[href*=#]:not([href=#])').click(function() {

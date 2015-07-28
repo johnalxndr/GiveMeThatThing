@@ -24,12 +24,14 @@ $.ajax({
     var title = $(xml).find('Title').text();
     var image = $(xml).find('ImageURL').text();
     var listprice = $(xml).find('ListPrice').text(); 
-    var saleprice = $(xml).find('SalePrice').text();  
+    var saleprice = $(xml).find('SalePrice').text();
+    var dealUrl = $(xml).find('DealURL').text();  
 
     $('.title').append(title);
     $('#listprice').append(listprice);
     $('#saleprice').append(saleprice);      
     $('.image').attr('src', image);
+    $('#ebay').attr('href', dealUrl);
   }
 })
 })
