@@ -2,17 +2,14 @@
 
 angular.module('dailysteals')
 
-.controller('MainCtrl', ['Auth','$firebaseArray','$firebaseObject','wootstuff',
-	function (Restangular, Auth, $firebaseArray, $firebaseObject,wootstuff) {
+.controller('MainCtrl', ['api', 'Auth', '$firebaseArray','$firebaseObject','Ebayapi',
+	function (api, Auth, $firebaseArray, $firebaseObject, Ebayapi) {
     var self = this;
-        wootstuff.woot.then(function(data){
-            self.wootData = data;
-            console.log(data);
-        })
+   
 //Slow Scroll 
-$(function() {
+        $(function() {
   $('a[href*=#]:not([href=#])').click(function() {
-    if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname) {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
       if (target.length) {
@@ -24,7 +21,7 @@ $(function() {
     }
   });
 });
-//End Slow Scrol         
+//End Slow Scroll         
   
 //Facebook Log in         
 	this.loginbox = true;
@@ -50,4 +47,42 @@ var userInfo = new Firebase('https://givemethatthing.firebaseio.com/users');
 	this.fbLogin = Auth.fbLogin;
     
 //End FB Log in      
+        
+//Start Kimono API Call        
+        api.woot.then(function (data) {
+        self.wootData = data.results.collection1[0];
+    });
+        api.dealgenius.then(function (data) {
+        self.dealgeniusData = data.results.collection1[0];        
+    });
+        api.wootshirt.then(function (data) {
+        self.wootShirtData = data.results.collection1[0]; 
+    });
+        api.woothome.then(function (data) {
+        self.wootHomeData = data.results.collection1[0];
+    });
+        api.wootsport.then(function (data) {
+        self.wootSportData = data.results.collection1[0];
+    });
+       api.wootelectronics.then(function (data) {
+        self.wootElectronicsData = data.results.collection1[0];
+    });
+        api.wootcomputers.then(function (data) {
+        self.wootComputersData = data.results.collection1[0];
+    });
+        api.woottoolsgarden.then(function (data) {
+        self.wootToolsGardenData = data.results.collection1[0];
+    });
+        api.ebay.then(function (data) {
+        self.ebayData = data.results.collection1[0];  
+    });
+        api.amazon.then(function (data) {
+        self.amazonData = data.results.collection1[0];  
+    });
+        api.yugster.then(function (data) {
+        self.yugsterData = data.results.collection1[0];  
+    });
+        Ebayapi.all('').getList(); 
+        console.log(0)
+//End API CALLS     
 }])
