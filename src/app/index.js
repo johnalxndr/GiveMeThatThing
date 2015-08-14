@@ -1,8 +1,8 @@
 
 'use strict';
 
-angular.module('dailysteals', ['restangular', 'ui.router', 'ui.bootstrap', 'firebase','$http'])
-    .config(function ($stateProvider, $urlRouterProvider) {
+angular.module('dailysteals', ['ui.router', 'ui.bootstrap','$http'])
+    .config(function ($stateProvider, $urlRouterProvider,$http) {
         $stateProvider
             .state('home', {
                 url: '/',
@@ -13,14 +13,8 @@ angular.module('dailysteals', ['restangular', 'ui.router', 'ui.bootstrap', 'fire
 
         $urlRouterProvider.otherwise('/');
     })
-    .config(function (RestangularProvider) {
-        RestangularProvider.setBaseUrl('https://www.kimonolabs.com/api/');
-        RestangularProvider.setDefaultRequestParams({
-            apikey: 'lxZzI5UKXbWL2JK3DL0U2g2uCfMjFUgd',
-        });
-    });
-//Ebay deals Api 
 
+//Ebay deals Api 
 $(document).ready(function(){
 $.ajax({
   type:'GET',
